@@ -31,7 +31,32 @@ def validador_idade(idade)
 end
 
 def imc(peso, altura)
-  peso / (altura * altura)
+  imc = peso / (altura * altura)
+  
+  # case imc
+  # when (..18.5) === imc
+  #   "Seu imc é #{imc} e você está na classificação magreza"
+  # when (18.6..24.9) === imc
+  #   "Seu imc é #{imc} e você está na classificação normal"
+  # when (25..29.9) === imc
+  #   "Seu imc é #{imc} e você está na classificação sobrepeso"
+  # when (30..39.9) === imc
+  #   "Seu imc é #{imc} e você está na classificação obesidade"
+  # when (40..) === imc
+  #   "Seu imc é #{imc} e você está na classificação obesidade grave"
+  # end
+
+  if (..18.5) === imc
+    "Seu imc é #{imc.round(2)} e você está na classificação magreza"
+  elsif (18.5..24.9) === imc
+    "Seu imc é #{imc.round(2)} e você está na classificação normal"
+  elsif (25..29.9) === imc
+    "Seu imc é #{imc.round(2)} e você está na classificação sobrepeso"
+  elsif (30..39.9) === imc
+    "Seu imc é #{imc.round(2)} e você está na classificação obesidade"
+  elsif (40..) === imc
+    "Seu imc é #{imc.round(2)} e você está na classificação obesidade grave"
+  end
 end
 
 prontuario = <<~PRONT
